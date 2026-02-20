@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VVFケーブル規格表 | TETSU.jp</title>
+    <meta name="description" content="VVFケーブルの規格、サイズ、許容電流、用途の一覧表。住宅配線の基礎知識。">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a1a1a;
+            --accent: #ff4500;
+            --electric: #ff9800;
+            --bg: #f5f5f5;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', -apple-system, sans-serif;
+            background: var(--bg);
+            color: #2c2c2c;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem 1rem;
+            border-bottom: 4px solid var(--electric);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1.5rem;
+            opacity: 0.8;
+        }
+
+        nav a:hover {
+            opacity: 1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .intro {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 6px solid var(--electric);
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .intro h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .table-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            border-bottom: 3px solid var(--electric);
+            padding-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 1.05rem;
+        }
+
+        th {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 0.5rem;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        td {
+            padding: 0.8rem 0.5rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background: #fff8f0;
+        }
+
+        .highlight {
+            background: #fff3cd !important;
+            font-weight: 700;
+        }
+
+        .note {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .note h3 {
+            margin-bottom: 0.8rem;
+            color: var(--primary);
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .tip-card {
+            background: #f5f5f5;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-top: 4px solid var(--electric);
+        }
+
+        .tip-card h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            table {
+                font-size: 0.85rem;
+            }
+            
+            th, td {
+                padding: 0.6rem 0.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📡 VVFケーブル規格表</h1>
+        <nav>
+            <a href="../index.html">← ホーム</a>
+            <a href="wire-current.html">電線許容電流</a>
+            <a href="crimp-r.html">圧着端子</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <h2>VVFケーブルとは</h2>
+            <p>
+                <strong>VVF（600Vビニル絶縁ビニルシースケーブル平形）</strong>は、住宅やビルの屋内配線で最も一般的に使われるケーブルです。<br>
+                「VVF 1.6×2C」のように表記され、<strong>導体径×芯数</strong>を意味します。
+            </p>
+        </div>
+
+        <div class="table-section">
+            <h2>VVFケーブル 規格表</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>型番</th>
+                        <th>芯数×サイズ</th>
+                        <th>導体径<br>(mm)</th>
+                        <th>仕上外径<br>(mm)</th>
+                        <th>許容電流<br>(A)</th>
+                        <th>主な用途</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="highlight">
+                        <td><strong>VVF 1.6×2C</strong></td>
+                        <td>2芯×1.6mm</td>
+                        <td>1.6</td>
+                        <td>約5.8×10.2</td>
+                        <td>19</td>
+                        <td>一般照明・コンセント</td>
+                    </tr>
+                    <tr>
+                        <td><strong>VVF 1.6×3C</strong></td>
+                        <td>3芯×1.6mm</td>
+                        <td>1.6</td>
+                        <td>約5.8×14.2</td>
+                        <td>19</td>
+                        <td>3路スイッチ配線</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td><strong>VVF 2.0×2C</strong></td>
+                        <td>2芯×2.0mm</td>
+                        <td>2.0</td>
+                        <td>約6.9×11.9</td>
+                        <td>27</td>
+                        <td>エアコン専用回路</td>
+                    </tr>
+                    <tr>
+                        <td><strong>VVF 2.0×3C</strong></td>
+                        <td>3芯×2.0mm</td>
+                        <td>2.0</td>
+                        <td>約6.9×16.5</td>
+                        <td>27</td>
+                        <td>200V回路・3路スイッチ</td>
+                    </tr>
+                    <tr>
+                        <td><strong>VVF 2.6×2C</strong></td>
+                        <td>2芯×2.6mm</td>
+                        <td>2.6</td>
+                        <td>約8.1×14.0</td>
+                        <td>37</td>
+                        <td>大容量機器</td>
+                    </tr>
+                    <tr>
+                        <td><strong>VVF 2.6×3C</strong></td>
+                        <td>3芯×2.6mm</td>
+                        <td>2.6</td>
+                        <td>約8.1×19.4</td>
+                        <td>37</td>
+                        <td>200V大容量機器</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-section">
+            <h2>用途別 VVFケーブルの選び方</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>用途</th>
+                        <th>推奨ケーブル</th>
+                        <th>ブレーカー</th>
+                        <th>備考</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>一般照明</td>
+                        <td>VVF 1.6×2C</td>
+                        <td>15A</td>
+                        <td>最も一般的</td>
+                    </tr>
+                    <tr>
+                        <td>一般コンセント</td>
+                        <td>VVF 1.6×2C</td>
+                        <td>15-20A</td>
+                        <td>通常の家電用</td>
+                    </tr>
+                    <tr>
+                        <td>3路スイッチ</td>
+                        <td>VVF 1.6×3C</td>
+                        <td>15A</td>
+                        <td>階段などの2ヶ所操作</td>
+                    </tr>
+                    <tr>
+                        <td>エアコン（14畳まで）</td>
+                        <td>VVF 2.0×2C</td>
+                        <td>20A</td>
+                        <td>専用回路推奨</td>
+                    </tr>
+                    <tr>
+                        <td>エアコン（18畳以上）</td>
+                        <td>VVF 2.0×3C</td>
+                        <td>20A</td>
+                        <td>200V仕様</td>
+                    </tr>
+                    <tr>
+                        <td>IHクッキングヒーター</td>
+                        <td>VVF 2.6×3C</td>
+                        <td>30A</td>
+                        <td>200V専用回路</td>
+                    </tr>
+                    <tr>
+                        <td>電子レンジ</td>
+                        <td>VVF 2.0×2C</td>
+                        <td>20A</td>
+                        <td>専用回路推奨</td>
+                    </tr>
+                    <tr>
+                        <td>エコキュート</td>
+                        <td>VVF 2.6×3C</td>
+                        <td>30A</td>
+                        <td>200V専用回路</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="note">
+            <h3>💡 VVFケーブルの特徴</h3>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h4>✓ 屋内専用</h4>
+                    <p>主に住宅・ビルの屋内配線に使用。屋外や地中には使えません。</p>
+                </div>
+                <div class="tip-card">
+                    <h4>✓ 扱いやすい</h4>
+                    <p>平形で配線しやすく、壁内や天井裏の施工に適している。</p>
+                </div>
+                <div class="tip-card">
+                    <h4>✓ 色分け</h4>
+                    <p>通常、白・黒の2色。3芯は白・黒・赤。アース線は緑/黄ストライプ。</p>
+                </div>
+                <div class="tip-card">
+                    <h4>✓ 耐久性</h4>
+                    <p>ビニル絶縁・シースで保護され、一般的な屋内環境で長期使用可能。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-section">
+            <h2>VVF vs VVR 違いは？</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>項目</th>
+                        <th>VVF（平形）</th>
+                        <th>VVR（丸形）</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>形状</td>
+                        <td>平たい（フラット）</td>
+                        <td>丸い（ラウンド）</td>
+                    </tr>
+                    <tr>
+                        <td>主な用途</td>
+                        <td>屋内配線（壁内・天井内）</td>
+                        <td>屋外・地中・露出配線</td>
+                    </tr>
+                    <tr>
+                        <td>柔軟性</td>
+                        <td>やや硬い</td>
+                        <td>柔軟で曲げやすい</td>
+                    </tr>
+                    <tr>
+                        <td>耐候性</td>
+                        <td>屋内専用</td>
+                        <td>屋外使用可能</td>
+                    </tr>
+                    <tr>
+                        <td>価格</td>
+                        <td>安価</td>
+                        <td>やや高価</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="note" style="background: #fff3cd; border-left-color: #ffc107;">
+            <h3>⚠️ 施工時の注意点</h3>
+            <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                <li>許容電流を超えないよう、適切なサイズを選定</li>
+                <li>電線管に入れる場合は、管の占積率（40%以下）を守る</li>
+                <li>曲げ半径は外径の6倍以上を確保</li>
+                <li>接続は必ずボックス内で行い、露出させない</li>
+                <li>長距離配線では電圧降下を考慮する</li>
+            </ul>
+        </div>
+
+        <div class="note">
+            <h3>🔌 関連ページ</h3>
+            <p>
+                <a href="wire-current.html" style="color: var(--electric); font-weight: 700;">→ 電線許容電流表</a><br>
+                <a href="crimp-r.html" style="color: var(--electric); font-weight: 700;">→ 圧着端子（R型）規格表</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圧着端子（R型）規格表 | TETSU.jp</title>
+    <meta name="description" content="丸型圧着端子（R型）の規格表。適合電線サイズ、ボルト径、色分け対応表。">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a1a1a;
+            --accent: #ff4500;
+            --electric: #ff9800;
+            --bg: #f5f5f5;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', -apple-system, sans-serif;
+            background: var(--bg);
+            color: #2c2c2c;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem 1rem;
+            border-bottom: 4px solid var(--electric);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1.5rem;
+            opacity: 0.8;
+        }
+
+        nav a:hover {
+            opacity: 1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .intro {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 6px solid var(--electric);
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .table-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            border-bottom: 3px solid var(--electric);
+            padding-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 1.05rem;
+        }
+
+        th {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 0.5rem;
+            text-align: left;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        td {
+            padding: 0.8rem 0.5rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background: #fff8f0;
+        }
+
+        .color-red { background: #ffcdd2; }
+        .color-blue { background: #bbdefb; }
+        .color-yellow { background: #fff9c4; }
+
+        .note {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .note h3 {
+            margin-bottom: 0.8rem;
+            color: var(--primary);
+        }
+
+        .tips {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .tip-card {
+            background: #f5f5f5;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-top: 4px solid var(--electric);
+        }
+
+        .tip-card h4 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            table {
+                font-size: 0.85rem;
+            }
+            
+            th, td {
+                padding: 0.6rem 0.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🔌 圧着端子（R型）規格表</h1>
+        <nav>
+            <a href="../index.html">← ホーム</a>
+            <a href="wire-current.html">電線許容電流</a>
+            <a href="vvf.html">VVFケーブル</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <h2>丸型圧着端子（R型）について</h2>
+            <p>
+                R型圧着端子は、電線をボルトやねじに接続する際に使用する最も一般的な端子です。<br>
+                <strong>「R1.25-4」</strong>のように表記され、<strong>R + 電線サイズ - ボルト径</strong>を意味します。
+            </p>
+        </div>
+
+        <div class="table-section">
+            <h2>R型圧着端子 寸法・適合表</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>型番</th>
+                        <th>適合電線<br>(sq)</th>
+                        <th>適合ボルト<br>(M)</th>
+                        <th>端子内径<br>(mm)</th>
+                        <th>圧着工具<br>ダイス</th>
+                        <th>絶縁色</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="color-red">
+                        <td><strong>R1.25-3</strong></td>
+                        <td>1.25</td>
+                        <td>M3</td>
+                        <td>3.2</td>
+                        <td>1.25</td>
+                        <td>赤</td>
+                    </tr>
+                    <tr class="color-red">
+                        <td><strong>R1.25-4</strong></td>
+                        <td>1.25</td>
+                        <td>M4</td>
+                        <td>4.2</td>
+                        <td>1.25</td>
+                        <td>赤</td>
+                    </tr>
+                    <tr class="color-red">
+                        <td><strong>R1.25-5</strong></td>
+                        <td>1.25</td>
+                        <td>M5</td>
+                        <td>5.3</td>
+                        <td>1.25</td>
+                        <td>赤</td>
+                    </tr>
+                    <tr class="color-red">
+                        <td><strong>R1.25-6</strong></td>
+                        <td>1.25</td>
+                        <td>M6</td>
+                        <td>6.4</td>
+                        <td>1.25</td>
+                        <td>赤</td>
+                    </tr>
+                    <tr class="color-blue">
+                        <td><strong>R2-3</strong></td>
+                        <td>2</td>
+                        <td>M3</td>
+                        <td>3.2</td>
+                        <td>2</td>
+                        <td>青</td>
+                    </tr>
+                    <tr class="color-blue">
+                        <td><strong>R2-4</strong></td>
+                        <td>2</td>
+                        <td>M4</td>
+                        <td>4.2</td>
+                        <td>2</td>
+                        <td>青</td>
+                    </tr>
+                    <tr class="color-blue">
+                        <td><strong>R2-5</strong></td>
+                        <td>2</td>
+                        <td>M5</td>
+                        <td>5.3</td>
+                        <td>2</td>
+                        <td>青</td>
+                    </tr>
+                    <tr class="color-blue">
+                        <td><strong>R2-6</strong></td>
+                        <td>2</td>
+                        <td>M6</td>
+                        <td>6.4</td>
+                        <td>2</td>
+                        <td>青</td>
+                    </tr>
+                    <tr class="color-yellow">
+                        <td><strong>R3.5-4</strong></td>
+                        <td>3.5</td>
+                        <td>M4</td>
+                        <td>4.2</td>
+                        <td>3.5</td>
+                        <td>黄</td>
+                    </tr>
+                    <tr class="color-yellow">
+                        <td><strong>R3.5-5</strong></td>
+                        <td>3.5</td>
+                        <td>M5</td>
+                        <td>5.3</td>
+                        <td>3.5</td>
+                        <td>黄</td>
+                    </tr>
+                    <tr class="color-yellow">
+                        <td><strong>R3.5-6</strong></td>
+                        <td>3.5</td>
+                        <td>M6</td>
+                        <td>6.4</td>
+                        <td>3.5</td>
+                        <td>黄</td>
+                    </tr>
+                    <tr class="color-yellow">
+                        <td><strong>R3.5-8</strong></td>
+                        <td>3.5</td>
+                        <td>M8</td>
+                        <td>8.4</td>
+                        <td>3.5</td>
+                        <td>黄</td>
+                    </tr>
+                    <tr>
+                        <td><strong>R5.5-4</strong></td>
+                        <td>5.5</td>
+                        <td>M4</td>
+                        <td>4.2</td>
+                        <td>5.5</td>
+                        <td>（裸）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>R5.5-5</strong></td>
+                        <td>5.5</td>
+                        <td>M5</td>
+                        <td>5.3</td>
+                        <td>5.5</td>
+                        <td>（裸）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>R5.5-6</strong></td>
+                        <td>5.5</td>
+                        <td>M6</td>
+                        <td>6.4</td>
+                        <td>5.5</td>
+                        <td>（裸）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>R5.5-8</strong></td>
+                        <td>5.5</td>
+                        <td>M8</td>
+                        <td>8.4</td>
+                        <td>5.5</td>
+                        <td>（裸）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>R8-5</strong></td>
+                        <td>8</td>
+                        <td>M5</td>
+                        <td>5.3</td>
+                        <td>8</td>
+                        <td>（裸）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>R8-6</strong></td>
+                        <td>8</td>
+                        <td>M6</td>
+                        <td>6.4</td>
+                        <td>8</td>
+                        <td>（裸）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>R8-8</strong></td>
+                        <td>8</td>
+                        <td>M8</td>
+                        <td>8.4</td>
+                        <td>8</td>
+                        <td>（裸）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>R14-6</strong></td>
+                        <td>14</td>
+                        <td>M6</td>
+                        <td>6.4</td>
+                        <td>14</td>
+                        <td>（裸）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>R14-8</strong></td>
+                        <td>14</td>
+                        <td>M8</td>
+                        <td>8.4</td>
+                        <td>14</td>
+                        <td>（裸）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>R14-10</strong></td>
+                        <td>14</td>
+                        <td>M10</td>
+                        <td>10.5</td>
+                        <td>14</td>
+                        <td>（裸）</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="note">
+            <h3>💡 選び方のポイント</h3>
+            <div class="tips">
+                <div class="tip-card">
+                    <h4>1. 電線サイズを確認</h4>
+                    <p>使用する電線のサイズ（sq）を確認。例：2sqの電線なら「R2-○」を選ぶ</p>
+                </div>
+                <div class="tip-card">
+                    <h4>2. ボルト径を確認</h4>
+                    <p>接続するボルトのサイズを確認。例：M4ボルトなら「R○-4」を選ぶ</p>
+                </div>
+                <div class="tip-card">
+                    <h4>3. 絶縁/裸を選択</h4>
+                    <p>小サイズ（1.25〜3.5sq）は絶縁タイプが一般的。色で電線サイズがわかる</p>
+                </div>
+                <div class="tip-card">
+                    <h4>4. 圧着工具を確認</h4>
+                    <p>手持ちの圧着工具のダイスサイズに対応しているか確認</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-section">
+            <h2>絶縁タイプの色分け</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>色</th>
+                        <th>適合電線サイズ (sq)</th>
+                        <th>見分け方</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="color-red">
+                        <td><strong>赤</strong></td>
+                        <td>0.5 〜 1.25</td>
+                        <td>最小サイズ</td>
+                    </tr>
+                    <tr class="color-blue">
+                        <td><strong>青</strong></td>
+                        <td>1.5 〜 2.5</td>
+                        <td>一般的なサイズ</td>
+                    </tr>
+                    <tr class="color-yellow">
+                        <td><strong>黄</strong></td>
+                        <td>3.5 〜 6</td>
+                        <td>やや大きめ</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="note" style="background: #fff3cd; border-left-color: #ffc107;">
+            <h3>⚠️ 圧着作業の注意点</h3>
+            <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                <li>必ず適合する圧着工具を使用する</li>
+                <li>電線の被覆は適切な長さで剥く（圧着部分のみ）</li>
+                <li>圧着後、軽く引っ張って抜けないか確認</li>
+                <li>裸圧着端子は必ず熱収縮チューブなどで絶縁する</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

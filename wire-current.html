@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電線許容電流表 | TETSU.jp</title>
+    <meta name="description" content="電線サイズ別の許容電流と推奨ブレーカー容量。現場で使える実用的な電気配線ガイド。">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a1a1a;
+            --accent: #ff4500;
+            --electric: #ff9800;
+            --bg: #f5f5f5;
+            --text: #2c2c2c;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem 1rem;
+            border-bottom: 4px solid var(--electric);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1.5rem;
+            opacity: 0.8;
+        }
+
+        nav a:hover {
+            opacity: 1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .intro {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 6px solid var(--electric);
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .table-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            border-bottom: 3px solid var(--electric);
+            padding-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+        }
+
+        th {
+            background: var(--primary);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+            position: sticky;
+            top: 0;
+        }
+
+        td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background: #fff8f0;
+        }
+
+        .highlight {
+            background: #fff3cd !important;
+            font-weight: 700;
+        }
+
+        .note {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .note h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .warning {
+            background: #ffebee;
+            border-left: 4px solid #f44336;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+            table {
+                font-size: 0.9rem;
+            }
+            
+            th, td {
+                padding: 0.6rem 0.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>⚡ 電線許容電流表</h1>
+        <nav>
+            <a href="../index.html">← ホーム</a>
+            <a href="crimp-r.html">圧着端子</a>
+            <a href="vvf.html">VVFケーブル</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <h2>電線サイズと許容電流</h2>
+            <p>
+                電線サイズ（断面積）別の許容電流と、推奨するブレーカー容量の一覧表です。<br>
+                <strong>許容電流の1.25倍以下</strong>でブレーカーを選定するのが基本です。
+            </p>
+        </div>
+
+        <div class="table-section">
+            <h2>600Vビニル絶縁電線（周囲温度30℃）</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>電線サイズ<br>(sq)</th>
+                        <th>導体外径<br>(mm)</th>
+                        <th>許容電流<br>(A)</th>
+                        <th>推奨ブレーカー<br>(A)</th>
+                        <th>主な用途</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0.75</td>
+                        <td>1.0</td>
+                        <td>7</td>
+                        <td>5</td>
+                        <td>制御回路、信号線</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>1.25</td>
+                        <td>1.3</td>
+                        <td>12</td>
+                        <td>10</td>
+                        <td>制御回路、照明</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>2</td>
+                        <td>1.6</td>
+                        <td>17</td>
+                        <td>15</td>
+                        <td>一般照明、コンセント</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>3.5</td>
+                        <td>2.1</td>
+                        <td>27</td>
+                        <td>20</td>
+                        <td>エアコン専用回路</td>
+                    </tr>
+                    <tr>
+                        <td>5.5</td>
+                        <td>2.6</td>
+                        <td>37</td>
+                        <td>30</td>
+                        <td>200V機器、小型動力</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>3.2</td>
+                        <td>49</td>
+                        <td>40</td>
+                        <td>動力機器</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>4.2</td>
+                        <td>68</td>
+                        <td>50</td>
+                        <td>幹線、大型機器</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>5.3</td>
+                        <td>91</td>
+                        <td>75</td>
+                        <td>幹線</td>
+                    </tr>
+                    <tr>
+                        <td>38</td>
+                        <td>7.0</td>
+                        <td>131</td>
+                        <td>100</td>
+                        <td>主幹線</td>
+                    </tr>
+                    <tr>
+                        <td>60</td>
+                        <td>8.8</td>
+                        <td>172</td>
+                        <td>150</td>
+                        <td>主幹線、引込線</td>
+                    </tr>
+                    <tr>
+                        <td>100</td>
+                        <td>11.3</td>
+                        <td>234</td>
+                        <td>200</td>
+                        <td>主幹線、引込線</td>
+                    </tr>
+                    <tr>
+                        <td>150</td>
+                        <td>13.9</td>
+                        <td>296</td>
+                        <td>250</td>
+                        <td>主幹線、引込線</td>
+                    </tr>
+                    <tr>
+                        <td>200</td>
+                        <td>16.0</td>
+                        <td>354</td>
+                        <td>300</td>
+                        <td>大容量幹線</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="note">
+            <h3>💡 電線サイズの選び方</h3>
+            <p><strong>STEP 1:</strong> 負荷電流を計算<br>
+            単相100V: 電流(A) = 電力(W) ÷ 100V<br>
+            単相200V: 電流(A) = 電力(W) ÷ 200V<br>
+            三相200V: 電流(A) = 電力(W) ÷ (200V × √3 × 力率)</p>
+            
+            <p style="margin-top: 1rem;"><strong>STEP 2:</strong> 安全率を考慮<br>
+            必要電流 × 1.25 ≦ 許容電流</p>
+            
+            <p style="margin-top: 1rem;"><strong>STEP 3:</strong> 電圧降下をチェック<br>
+            長距離配線では電圧降下も考慮（2%以内推奨）</p>
+        </div>
+
+        <div class="warning">
+            <h3>⚠️ 注意事項</h3>
+            <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                <li>周囲温度が40℃を超える場合は、許容電流を低減する</li>
+                <li>電線を束ねる場合や、管内配線では低減係数を考慮</li>
+                <li>連続使用する機器は余裕を持たせる</li>
+                <li>モーター負荷は起動電流を考慮する</li>
+            </ul>
+        </div>
+
+        <div class="table-section">
+            <h2>よく使うサイズの目安</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>用途</th>
+                        <th>推奨サイズ</th>
+                        <th>ブレーカー</th>
+                        <th>備考</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>一般照明</td>
+                        <td>1.6mm（VVF）</td>
+                        <td>15A</td>
+                        <td>スイッチ1回路あたり</td>
+                    </tr>
+                    <tr>
+                        <td>一般コンセント</td>
+                        <td>1.6mm（VVF）</td>
+                        <td>15-20A</td>
+                        <td>分岐回路</td>
+                    </tr>
+                    <tr>
+                        <td>エアコン専用</td>
+                        <td>2.0mm（VVF）</td>
+                        <td>20A</td>
+                        <td>14畳用まで</td>
+                    </tr>
+                    <tr>
+                        <td>IH・電子レンジ</td>
+                        <td>2.0mm以上</td>
+                        <td>20-30A</td>
+                        <td>専用回路推奨</td>
+                    </tr>
+                    <tr>
+                        <td>200V機器</td>
+                        <td>3.5sq以上</td>
+                        <td>20-30A</td>
+                        <td>機器の消費電力による</td>
+                    </tr>
+                    <tr>
+                        <td>動力（3相）</td>
+                        <td>5.5sq以上</td>
+                        <td>30A〜</td>
+                        <td>モーター容量による</td>
+                    </tr>
+                    <tr>
+                        <td>制御回路</td>
+                        <td>0.75-1.25sq</td>
+                        <td>5-10A</td>
+                        <td>盤内配線</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="note">
+            <h3>🔌 関連ページ</h3>
+            <p>
+                <a href="crimp-r.html" style="color: var(--electric); font-weight: 700;">→ 圧着端子（R型）規格表</a><br>
+                <a href="vvf.html" style="color: var(--electric); font-weight: 700;">→ VVFケーブル規格表</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

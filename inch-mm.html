@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>インチ⇔ミリ変換 | TETSU.jp</title>
+    <meta name="description" content="インチ⇔ミリメートル変換表と計算機。1/64インチから対応。現場で使える実用的な変換ツール。">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a1a1a;
+            --accent: #ff4500;
+            --secondary: #0066cc;
+            --bg: #f5f5f5;
+            --text: #2c2c2c;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem 1rem;
+            border-bottom: 4px solid var(--accent);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: 0.05em;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1.5rem;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        nav a:hover {
+            opacity: 1;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .calculator {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+            border-top: 6px solid var(--accent);
+        }
+
+        .calculator h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .calc-input {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        input {
+            flex: 1;
+            padding: 0.8rem;
+            font-size: 1.2rem;
+            border: 2px solid var(--primary);
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        button {
+            padding: 0.8rem 2rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            background: #ff6a33;
+            transform: scale(1.05);
+        }
+
+        .result {
+            background: #f0f0f0;
+            padding: 1.5rem;
+            border-radius: 4px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            color: var(--primary);
+        }
+
+        .table-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .table-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        th {
+            background: var(--primary);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background: #f9f9f9;
+        }
+
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 0.6rem;
+            }
+
+            .input-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📏 インチ⇔ミリ変換</h1>
+        <nav>
+            <a href="../index.html">← ホーム</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="calculator">
+            <h2>計算機</h2>
+            <div class="calc-input">
+                <div class="input-group">
+                    <input type="number" id="inch-input" placeholder="インチを入力" step="0.001">
+                    <span style="font-size: 1.2rem; font-weight: 700;">インチ</span>
+                </div>
+                <button onclick="convertToMm()">↓ ミリに変換</button>
+                <div class="result" id="mm-result">0.000 mm</div>
+            </div>
+
+            <hr style="margin: 2rem 0; border: none; border-top: 2px solid #ddd;">
+
+            <div class="calc-input">
+                <div class="input-group">
+                    <input type="number" id="mm-input" placeholder="ミリを入力" step="0.001">
+                    <span style="font-size: 1.2rem; font-weight: 700;">mm</span>
+                </div>
+                <button onclick="convertToInch()">↓ インチに変換</button>
+                <div class="result" id="inch-result">0.000 "</div>
+            </div>
+        </div>
+
+        <div class="table-section">
+            <h2>インチ⇔ミリ 変換表</h2>
+            
+            <h3 style="margin-top: 2rem; font-size: 1.4rem;">分数インチ</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>インチ</th>
+                        <th>ミリ (mm)</th>
+                        <th>小数点表記</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1/64"</td><td>0.397</td><td>0.015625"</td></tr>
+                    <tr><td>1/32"</td><td>0.794</td><td>0.03125"</td></tr>
+                    <tr><td>1/16"</td><td>1.588</td><td>0.0625"</td></tr>
+                    <tr><td>3/32"</td><td>2.381</td><td>0.09375"</td></tr>
+                    <tr><td>1/8"</td><td>3.175</td><td>0.125"</td></tr>
+                    <tr><td>5/32"</td><td>3.969</td><td>0.15625"</td></tr>
+                    <tr><td>3/16"</td><td>4.763</td><td>0.1875"</td></tr>
+                    <tr><td>7/32"</td><td>5.556</td><td>0.21875"</td></tr>
+                    <tr><td>1/4"</td><td>6.350</td><td>0.25"</td></tr>
+                    <tr><td>5/16"</td><td>7.938</td><td>0.3125"</td></tr>
+                    <tr><td>3/8"</td><td>9.525</td><td>0.375"</td></tr>
+                    <tr><td>7/16"</td><td>11.113</td><td>0.4375"</td></tr>
+                    <tr><td>1/2"</td><td>12.700</td><td>0.5"</td></tr>
+                    <tr><td>9/16"</td><td>14.288</td><td>0.5625"</td></tr>
+                    <tr><td>5/8"</td><td>15.875</td><td>0.625"</td></tr>
+                    <tr><td>11/16"</td><td>17.463</td><td>0.6875"</td></tr>
+                    <tr><td>3/4"</td><td>19.050</td><td>0.75"</td></tr>
+                    <tr><td>13/16"</td><td>20.638</td><td>0.8125"</td></tr>
+                    <tr><td>7/8"</td><td>22.225</td><td>0.875"</td></tr>
+                    <tr><td>15/16"</td><td>23.813</td><td>0.9375"</td></tr>
+                    <tr><td>1"</td><td>25.400</td><td>1.0"</td></tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 2rem; font-size: 1.4rem;">整数インチ</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>インチ</th>
+                        <th>ミリ (mm)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1"</td><td>25.4</td></tr>
+                    <tr><td>2"</td><td>50.8</td></tr>
+                    <tr><td>3"</td><td>76.2</td></tr>
+                    <tr><td>4"</td><td>101.6</td></tr>
+                    <tr><td>5"</td><td>127.0</td></tr>
+                    <tr><td>6"</td><td>152.4</td></tr>
+                    <tr><td>7"</td><td>177.8</td></tr>
+                    <tr><td>8"</td><td>203.2</td></tr>
+                    <tr><td>9"</td><td>228.6</td></tr>
+                    <tr><td>10"</td><td>254.0</td></tr>
+                    <tr><td>12"</td><td>304.8</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="note">
+            <strong>💡 覚え方：</strong> 1インチ = 25.4mm（正確）<br>
+            おおよそ「1インチ ≒ 2.5cm」と覚えておくと便利です。
+        </div>
+    </div>
+
+    <script>
+        function convertToMm() {
+            const inch = parseFloat(document.getElementById('inch-input').value);
+            if (isNaN(inch)) {
+                alert('数値を入力してください');
+                return;
+            }
+            const mm = inch * 25.4;
+            document.getElementById('mm-result').textContent = mm.toFixed(3) + ' mm';
+        }
+
+        function convertToInch() {
+            const mm = parseFloat(document.getElementById('mm-input').value);
+            if (isNaN(mm)) {
+                alert('数値を入力してください');
+                return;
+            }
+            const inch = mm / 25.4;
+            document.getElementById('inch-result').textContent = inch.toFixed(4) + ' "';
+        }
+    </script>
+</body>
+</html>

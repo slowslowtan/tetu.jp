@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TETSU.jp - 現場で使える工具・規格表サイト</title>
+    <meta name="description" content="工業現場で使える変換表、規格表、工具情報を集約。インチ⇔ミリ、電線許容電流、圧着端子、Oリング規格など。">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a1a1a;
+            --accent: #ff4500;
+            --secondary: #0066cc;
+            --bg: #f5f5f5;
+            --text: #2c2c2c;
+            --border: #ddd;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .intro {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border-left: 6px solid var(--accent);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .intro h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .intro p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin: 3rem 0 1.5rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--primary);
+            font-weight: 700;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: white;
+            padding: 1.8rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--secondary);
+            text-decoration: none;
+            color: var(--text);
+            display: block;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+            border-top-color: var(--accent);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .card p {
+            font-size: 1rem;
+            opacity: 0.85;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TETSU.jp</h1>
+        <p>現場で使える工具・規格表サイト</p>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <h2>現場のプロが作った、実用特化サイト</h2>
+            <p>
+                毎日の作業で「あの数値、何だっけ？」と思ったことはありませんか？<br>
+                インチ⇔ミリ変換、電線の許容電流、圧着端子の規格、Oリングのサイズ…<br>
+                現場で本当に必要な情報だけを、シンプルに、わかりやすく。
+            </p>
+        </div>
+
+        <h2 class="section-title">🔧 変換・計算ツール</h2>
+        <div class="cards">
+            <a href="conversion/inch-mm.html" class="card">
+                <div class="card-icon">📏</div>
+                <h3>インチ⇔ミリ変換</h3>
+                <p>インチとミリの変換表・計算機。1/64"から対応。</p>
+                <span class="badge">よく使う</span>
+            </a>
+
+            <a href="conversion/pipe-size.html" class="card">
+                <div class="card-icon">🔩</div>
+                <h3>配管サイズ（A呼称）</h3>
+                <p>A呼称⇔B呼称⇔外径の対応表。</p>
+            </a>
+
+            <a href="conversion/thread-pitch.html" class="card">
+                <div class="card-icon">🔧</div>
+                <h3>ねじピッチ表</h3>
+                <p>メートルねじ、ユニファイねじのピッチ一覧。</p>
+            </a>
+        </div>
+
+        <h2 class="section-title">⚡ 電気部品</h2>
+        <div class="cards">
+            <a href="electrical/wire-current.html" class="card">
+                <div class="card-icon">⚡</div>
+                <h3>電線許容電流表</h3>
+                <p>電線サイズ別の許容電流とブレーカー容量。</p>
+                <span class="badge">よく使う</span>
+            </a>
+
+            <a href="electrical/crimp-r.html" class="card">
+                <div class="card-icon">🔌</div>
+                <h3>圧着端子（R型）</h3>
+                <p>丸型圧着端子の規格表。適合電線・ボルト径対応。</p>
+                <span class="badge">よく使う</span>
+            </a>
+
+            <a href="electrical/vvf.html" class="card">
+                <div class="card-icon">📡</div>
+                <h3>VVFケーブル規格</h3>
+                <p>VVFケーブルのサイズ・許容電流・用途。</p>
+            </a>
+
+            <a href="electrical/fuse.html" class="card">
+                <div class="card-icon">🔋</div>
+                <h3>ヒューズ規格</h3>
+                <p>管ヒューズ、ブレードヒューズの規格一覧。</p>
+            </a>
+        </div>
+
+        <h2 class="section-title">🔩 機械部品</h2>
+        <div class="cards">
+            <a href="mechanical/bolt-hexagon.html" class="card">
+                <div class="card-icon">🔩</div>
+                <h3>六角穴付きボルト</h3>
+                <p>キャップスクリュー寸法表。六角穴対辺、下穴径。</p>
+            </a>
+
+            <a href="mechanical/o-ring-p.html" class="card">
+                <div class="card-icon">⭕</div>
+                <h3>Oリング（P規格）</h3>
+                <p>固定用Oリングの寸法・溝寸法。</p>
+            </a>
+
+            <a href="mechanical/o-ring-g.html" class="card">
+                <div class="card-icon">⭕</div>
+                <h3>Oリング（G規格）</h3>
+                <p>運動用Oリングの寸法・溝寸法。</p>
+            </a>
+
+            <a href="mechanical/tap-drill.html" class="card">
+                <div class="card-icon">🔧</div>
+                <h3>タップ・下穴対応表</h3>
+                <p>ねじサイズ別の下穴径とタップサイズ。</p>
+            </a>
+        </div>
+
+        <h2 class="section-title">🛠️ 工具カタログ</h2>
+        <div class="cards">
+            <a href="tools/drill.html" class="card">
+                <div class="card-icon">🔨</div>
+                <h3>ドリル</h3>
+                <p>現場で使える、プロが選ぶドリル。</p>
+            </a>
+
+            <a href="tools/measure.html" class="card">
+                <div class="card-icon">📐</div>
+                <h3>測定工具</h3>
+                <p>ノギス、マイクロメーター、精度が命。</p>
+            </a>
+
+            <a href="tools/crimp-tool.html" class="card">
+                <div class="card-icon">🔧</div>
+                <h3>圧着工具</h3>
+                <p>圧着ペンチ、ワイヤーストリッパー。</p>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 TETSU.jp - 現場で使える工具・規格表サイト</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Made by professionals, for professionals.</p>
+    </footer>
+</body>
+</html>
